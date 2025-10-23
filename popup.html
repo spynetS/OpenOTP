@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>OTP Authenticator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>OTP Authenticator</h1>
+      <button id="addAccountBtn" class="btn-add">+ Add Account</button>
+    </div>
+    
+    <div id="accountsList" class="accounts-list">
+      <!-- Accounts will be dynamically added here -->
+    </div>
+    
+    <div id="emptyState" class="empty-state">
+      <p>No accounts added yet</p>
+      <p class="hint">Click "Add Account" to get started</p>
+    </div>
+    
+    <div id="addAccountForm" class="modal hidden">
+      <div class="modal-content">
+        <h2>Add Account</h2>
+        <input type="text" id="accountName" placeholder="Account name (e.g., Google, GitHub)" />
+        <input type="text" id="secretKey" placeholder="Secret key" />
+        <p class="hint">Enter the secret key provided by the service</p>
+        <div class="modal-buttons">
+          <button id="saveAccount" class="btn-primary">Save</button>
+          <button id="cancelAdd" class="btn-secondary">Cancel</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div id="timeProgress" class="time-progress">
+        <div id="timeBar" class="time-bar"></div>
+      </div>
+      <span id="timeLeft" class="time-left">30s</span>
+    </div>
+  </div>
+  
+  <script src="totp.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
