@@ -1,8 +1,11 @@
 {
-  "manifest_version": 2,
-  "name": "OTP Authenticator",
-  "version": "1.0.0",
-  "description": "Generate OTP codes for two-factor authentication",
+		"manifest_version": 2,
+		"name": "OTP Authenticator",
+		"version": "1.0.0",
+		"description": "Generate OTP codes for two-factor authentication",
+		"author" : "Alfred Roos",
+		"homepage_url": "https://github.com/spynetS/OpenOTP"
+		
   "icons": {
     "48": "icon.png",
     "96": "icon.png"
